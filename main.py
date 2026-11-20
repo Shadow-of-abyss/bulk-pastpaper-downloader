@@ -2,25 +2,18 @@ import os
 import time
 import requests
 
-
-# sub = int(input("enter the subject code :"))
-# years = int(input("how many years of pastpaper do you want to download : "))
-
-
-
-
 def downloader(years,sub):
     stuff = ["qp", "in","ms"]
     year_from = 25
     sessions = ["s","w","m"]
-    # type = input(f"the subject {sub}. is it extended subject or normal (y/N): ")
-    # if type == "y":
-    #     practical = input("paper 6? (y/N) : ")
-    #     if practical == "y":
-    #         variants = ["22","21","23","41","42","43","61","62","63"]
-    #     else:
-    #         variants = ["22","21","23","41","42","43"]
-    # else:
+    type = input(f"the subject {sub}. is it extended subject or normal (y/N): ")
+    if type == "y":
+        practical = input("paper 6? (y/N) : ")
+        if practical == "y":
+            variants = ["22","21","23","41","42","43","61","62","63"]
+        else:
+            variants = ["22","21","23","41","42","43"]
+    else:
     variants = ["11","12","13","21","22","23"]
     
     
@@ -87,9 +80,10 @@ def downloader(years,sub):
 
 
 
+sub = int(input("enter the subject code :"))
+years = int(input("how many years of pastpaper do you want to download : "))
 
 
-subject = ["0990","0510","0511","0991"]
-for i in subject:
 
-    downloader(15,i)
+
+downloader(years,sub)
